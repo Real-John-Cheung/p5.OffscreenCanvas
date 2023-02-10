@@ -6,7 +6,6 @@ window = {
     document: {
         hasFocus: () => true,
         createElementNS: (ns, elem) => {
-            console.warn(`p5.js tryied to created oc DOM element '${ns}:${elem}`);
             return {};
         }
     },
@@ -15,7 +14,6 @@ window = {
         if (e === "load") {
             loadHandlers.push(handler);
         } else {
-            console.warn(`p5.js tried to added an event listener for '${e}'`);
         }
     },
     removeEventListener: () => { },

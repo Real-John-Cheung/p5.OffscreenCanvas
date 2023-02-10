@@ -1,6 +1,6 @@
 {
   "name": "p5.offscreencanvas",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a library for manipulating OffscreenCanvas with p5",
   "main": "src/p5.OffscreenCanvas.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js && cp docs/dist/p5.OffscreenCanvas.js dist/p5.OffscreenCanvas.js"
+    "build": "webpack --config webpack.config.js && cp docs/dist/p5.OffscreenCanvas.js dist/p5.OffscreenCanvas.js && cp docs/dist/p5.OffscreenCanvas.js example/p5.OffscreenCanvas.js"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>p5.OffScreenCanvas</title>
+    <meta charset="utf-8">
+    <script src="./p5.min.js"></script>
+    <script src="./p5.OffscreenCanvas.js"></script>
+    <script src="./sketch.js"></script>
+    <style>
+        body {
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        #example {
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>p5.OffScreenCanvas</h1>
+    <div id="example"></div>
+    <div>
+        <p>p5.OffScreenCanvas is a light-weight library for manipulating <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">OffScreenCanvas</a> with p5js. Above is a live example of using this library.
+        </p>
+        <p>Made by <a href="https://johncheung.art">JohnC</a>, Visit the <a href="https://github.com/Real-John-Cheung/p5.OffscreenCanvas">github repo</a> for information on how to download and use it.</p>
+        <h2 id="api">API</h2>
+        <h3 id="-createoffscreencanvas-"><code>createOffscreenCanvas</code></h3>
+        <p>Type: function</p>
+        <p>Arguments: <code>width</code>, <code>height</code>, <code>[renderer = P2D]</code></p>
+        <p>Create a new wrapper object (of class <code>OC</code>) of a <code>OffscreenCanvas</code> object with the
+            given width and height.</p>
+        <h3 id="-oc-reset-"><code>OC.reset</code></h3>
+        <p>Type: function</p>
+        <p>Argument: none</p>
+        <p>Reset the offscreen canvas context matrix.</p>
+        <h3 id="-oc-remove-"><code>OC.remove</code></h3>
+        <p>Type: function</p>
+        <p>Argument: none</p>
+        <p>Remove this offscreen canvas from the p5 instance.</p>
+        <h3 id="-oc-currentframe-"><code>OC.currentFrame</code></h3>
+        <p>Type: function</p>
+        <p>Argument: none</p>
+        <p>Return: a ImageBitmap object</p>
+        <p>Return a bitmap image of the current render of the offscreen render this action will transfer all content in
+            the canvas to the ImageBitmap object.</p>
+        <h3 id="-oc-currentblob-"><code>OC.currentBlob</code></h3>
+        <p>Type: function</p>
+        <p>Arguments: </p>
+        <p>{object} <code>options</code>: an object containing the options, see <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/convertToBlob">https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/convertToBlob</a>
+        </p>
+        <p>{function} <code>callback</code>: an callback to handle the promise</p>
+        <p>Return: A <code>Promise</code> returning a Blob object if a callback is not specified, else
+            <code>undefined</code>.
+        </p>
+        <p>Create a Blob object representing the image contained in the canvas</p>
+        <h3 id="-oc-currentcanvas-"><code>OC.currentCanvas</code></h3>
+        <p>Type: function</p>
+        <p>Argument: none</p>
+        <p>Return: The OffscreenCanvas Object</p>
+        <p>Return the transferable OffscreenCanvas object.</p>
+        <h3 id="-oc-loadcanvas-"><code>OC.loadCanvas</code></h3>
+        <p>Type: function</p>
+        <p>Argument:</p>
+        <p>{OffscreenCanvas} <code>comingCanvas</code></p>
+        <p>Load a transferable OffscreenCanvas object. This action will create a new renderer if the loaded canvas&#39;
+            drawing context is different from the current one. Else the drawing context properties (e.g. fill and stroke
+            color in 2d context) are also loaded. This action will not copy the OffscreenCanvas object.</p>
+
+
+    </div>
+    <script>
+        new p5(sketch, document.getElementById("example"));
+    </script>
+</body>
+
+</html>
